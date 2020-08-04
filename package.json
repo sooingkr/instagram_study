@@ -1,0 +1,30 @@
+{
+  "name": "instagram_study",
+  "version": "1.0.0",
+  "description": "instagram_study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sooingkr/instagram_study.git"
+  },
+  "author": "gomugom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sooingkr/instagram_study/issues"
+  },
+  "homepage": "https://github.com/sooingkr/instagram_study#readme",
+  "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.0",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "dotenv": "^8.2.0",
+    "graphql-yoga": "^1.18.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
+}
