@@ -2,7 +2,6 @@
   "name": "instagram_study",
   "version": "1.0.0",
   "description": "instagram_study",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec babel-node src/server.js"
