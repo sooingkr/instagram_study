@@ -1,10 +1,12 @@
-import {prisma} from "../../../../prismagram/generated/prisma-client"
+import {prisma} from "../../../../generated/prisma-client"
 
 export default {
     Query : {
         userById : async(_, args) => {
             const { id } = args;
-            return await prisma.user({id : id})
+            
+            return await prisma.user({where : {id : id}});
+            // return await prisma.user({id : id})
         }
     }
 }

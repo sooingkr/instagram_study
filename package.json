@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec babel-node src/server.js",
-    "deploy": "cd prismagram && prisma deploy",
-    "generate": "cd prismagram && prisma generate",
+    "deploy": "prisma deploy",
+    "generate": "prisma generate",
     "prisma": "yarn run deploy && yarn run generate"
   },
   "repository": {
@@ -29,6 +29,7 @@
     "graphql-yoga": "^1.18.3",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4",
+    "prisma-client": "^0.0.0",
     "prisma-client-lib": "^1.34.10"
   },
   "devDependencies": {}
