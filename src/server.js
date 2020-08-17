@@ -1,16 +1,22 @@
 import { GraphQLServer } from "graphql-yoga";
 // 환경설정 파일을 불러옴(key:value 형태로 구성된) => .env 파일을 읽음
 import dotenv from "dotenv";
-dotenv.config();
+import path from "path";
+dotenv.config({
+    path : path.resolve(__dirname, ".env")
+});
 
 // 로거
 import logger from "morgan";
 import schema from "./schema";
 
+import { sendSecretMail } from "./utils";
+
+// TEST
+sendSecretMail("dudfhd705@gmail.com","test123");
+
 // .env파일에 있는 PORT변수에 접근(.env파일은 루트 디렉토리에 있어야함!)
 const PORT = process.env.PORT || 4000;
-
-console.log("test : " + process.env.PORT);
 
 const typeDefs = `
     type Query{
