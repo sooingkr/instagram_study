@@ -6,6 +6,8 @@ dotenv.config({
     path : path.resolve(__dirname, ".env")
 });
 
+import jwt from "jsonwebtoken";
+
 export const generateSecret = () => {
     const randomNumber = Math.floor(Math.random() * adjectives.length);
     return `${adjectives[randomNumber]} ${nouns[randomNumber]}`;
@@ -30,7 +32,10 @@ const sendMail = email => {
       from: "dudfhd705@gmail.com",
       to: adress,
       subject: "🔒Login Secret for Prismagram🔒",
-      html: `Hello! Your login secret it ${secret}.<br/>Copy paste on the app/website to log in`
+      html: `Hello! Your login secret is <strong>${secret}</strong>.<br/>Copy paste on the app/website to log in`
     };
     return sendMail(email);
   };
+
+  // jsonwebtoken 모듈을 통해 토큰 생성
+  export const generateToken = (id) => jwt.sign({id}, process.env.JWT_SECRET);
